@@ -42,7 +42,7 @@
 
             @guest
                 <nav class="flex items-center gap-2">
-                    <a class="text-sm font-bold text-gray-600 uppercase" href="#">Login</a>
+                    <a class="text-sm font-bold text-gray-600 uppercase" href="{{ route('login') }}">Login</a>
                     <a class="text-sm font-bold text-gray-600 uppercase" href="{{ route('register') }}">Crear Cuenta</a>
                 </nav>
             @endguest

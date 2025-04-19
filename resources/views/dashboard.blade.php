@@ -30,4 +30,25 @@
         </div>
 
     </div>
+    <section class="container mx-auto mt-10">
+        <h2 class="my-10 text-4xl font-black text-center">Publicaciones</h2>
+        @if ($posts->count())
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                @foreach ($posts as $post)
+                    <div class="">
+                        <a href="{{ route('posts.show', ['post' => $post, 'user' => $user]) }}">
+                            <img src="{{ asset('uploads') . '/' . $post->imagen }}"
+                                alt="Imagen de la publicación {{ $post->titulo }}">
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="my-10">
+                {{ $posts->links('pagination::tailwind') }}
+            </div>
+        @else
+            <p class="text-sm font-bold text-center text-gray-600 uppercase">No hay publicaciones</p>
+        @endif
+    </section>
 @endsection
