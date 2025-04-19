@@ -15,7 +15,7 @@
 <body class="bg-gray-100">
     <header class="p-5 bg-white border-b shadow">
         <div class="container flex items-center justify-between mx-auto">
-            <h1 class="text-3xl font-black">DevTagram</h1>
+            <a href="{{ route('home') }}" class="text-3xl font-black">DevTagram</a>
             @auth
                 <nav class="flex items-center gap-2">
                     <a href="{{ route('posts.create') }}"
